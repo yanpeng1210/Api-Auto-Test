@@ -36,6 +36,9 @@ public class ProxyUtils {
             case GlobalVar.DOUBAN_MOVIE_SERVER:
                 host = GlobalVar.DOUBAN_MOVIE_SERVER_URL;
                 break;
+            case GlobalVar.VIDEO_BMS_SERVER:
+                host = GlobalVar.VIDEO_BMS_SERVER_URL;
+                break;
             default:
                 throw new RuntimeException(String.format("未查找到接口类%s配置的@HOST(%s)注解中的%s接口服务器地址",
                         clazz.getName(),
