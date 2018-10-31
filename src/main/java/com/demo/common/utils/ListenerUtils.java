@@ -12,6 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.net.URL;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -42,7 +43,7 @@ public class ListenerUtils extends RunListener {
 
         // 第一个测试类开始测试的时间
         if(++testClassCount == 1){
-            testBeginTime = new Date().toString();
+            testBeginTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
             testBeginTimeMills = System.currentTimeMillis();
         }
     }
