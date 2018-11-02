@@ -39,6 +39,18 @@ public class ProxyUtils {
             case GlobalVar.VIDEO_BMS_SERVER:
                 host = GlobalVar.VIDEO_BMS_SERVER_URL;
                 break;
+            case GlobalVar.CINEMA_API_PIAOSHEN_SERVER:
+                host = GlobalVar.CINEMA_API_PIAOSHEN_URL;
+                break;
+            case GlobalVar.MISC_API_PIAOSHEN_SERVER:
+                host = GlobalVar.MISC_API_PIAOSHEN_URL;
+                break;
+            case GlobalVar.USER_API_PIAOSHEN_SERVER:
+                host = GlobalVar.USER_API_PIAOSHEN_URL;
+                break;
+            case GlobalVar.TICKET_API_PIAOSHEN_SERVER:
+                host = GlobalVar.TICKET_API_PIAOSHEN_URL;
+                break;
             default:
                 throw new RuntimeException(String.format("未查找到接口类%s配置的@HOST(%s)注解中的%s接口服务器地址",
                         clazz.getName(),
