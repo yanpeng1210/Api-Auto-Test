@@ -11,6 +11,7 @@ import com.jayway.restassured.response.Response;
  * @Date 2018/11/2 17:07
  */
 @SERVER(GlobalVar.CINEMA_API_PIAOSHEN_SERVER)
+@SuppressWarnings("all")
 public interface CinemaApi {
     /**
      * 按商圈、地铁查找影院
