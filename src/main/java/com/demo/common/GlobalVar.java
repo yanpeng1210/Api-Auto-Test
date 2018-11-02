@@ -14,13 +14,13 @@ public class GlobalVar {
     /**
      * 票神
      */
-    public static String USER_API_PIAOSHEN_SERVER = "USER_API_PIAOSHEN_SERVER";
+    public static final String USER_API_PIAOSHEN_SERVER = "USER_API_PIAOSHEN_SERVER";
     public static String USER_API_PIAOSHEN_URL = "http://user-api.piaoshen-dev.com";
-    public static String MISC_API_PIAOSHEN_SERVER = "MISC_API_PIAOSHEN_SERVER";
+    public static final String MISC_API_PIAOSHEN_SERVER = "MISC_API_PIAOSHEN_SERVER";
     public static String MISC_API_PIAOSHEN_URL = "http://misc-api.piaoshen-dev.com";
-    public static String CINEMA_API_PIAOSHEN_SERVER = "CINEMA_API_PIAOSHEN_SERVER";
+    public static final String CINEMA_API_PIAOSHEN_SERVER = "CINEMA_API_PIAOSHEN_SERVER";
     public static String CINEMA_API_PIAOSHEN_URL = "http://cinema-api.piaoshen-dev.com";
-    public static String TICKET_API_PIAOSHEN_SERVER = "TICKET_API_PIAOSHEN_SERVER";
+    public static final String TICKET_API_PIAOSHEN_SERVER = "TICKET_API_PIAOSHEN_SERVER";
     public static String TICKET_API_PIAOSHEN_URL = "http://ticket-api.piaoshen-dev.com";
     public static Map<String, String> COOKIES = new HashMap<>();
     public static Map<String, Object> HEADERS = new HashMap<>();
