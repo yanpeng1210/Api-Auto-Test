@@ -5,6 +5,7 @@ import com.demo.common.runner.BaseRunner;
 import com.demo.common.utils.ProxyUtils;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import static org.hamcrest.Matchers.equalTo;
 /**
@@ -30,6 +31,7 @@ public class TestVideoBmsApi extends BaseRunner{
         GlobalVar.COOKIES = response.getCookies();
 
     }
+    @Ignore
     @Test
     public void testCurrentUser() throws Exception{
         for (String key : GlobalVar.COOKIES.keySet()){
