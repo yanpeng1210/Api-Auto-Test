@@ -1,9 +1,11 @@
 package com.demo.common.utils;
 
+import com.demo.common.GlobalVar;
 import com.demo.common.entity.TestStep;
 import com.demo.common.enums.HttpType;
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.config.RestAssuredConfig;
+import com.jayway.restassured.response.Headers;
 import com.jayway.restassured.response.Response;
 import com.jayway.restassured.specification.RequestSpecification;
 import org.slf4j.Logger;
@@ -103,7 +105,9 @@ public class HttpUtils {
      */
     private Response request(HttpType httpType, String path, Map<String, Object> params) {
         logger.info("[" + httpType.getValue() + "]" + getRequestInfo(path, params));
-
+        if (baseURL != null && baseURL.contains("piaoshen")){
+            HEADERS = PiaoShenMD5.setPisoShenHeader(getRequestInfo(path, params));
+        }
         switch (httpType) {
             case GET:
                 response = getRequestSpecification(path).params(params).get();
@@ -126,7 +130,9 @@ public class HttpUtils {
      */
     private Response request(HttpType httpType, String path) {
         logger.info("[" + httpType.getValue() + "]" + getRequestInfo(path));
-
+        if (baseURL != null && baseURL.contains("piaoshen")){
+            HEADERS = PiaoShenMD5.setPisoShenHeader(getRequestInfo(path));
+        }
         switch (httpType) {
             case GET:
                 response = getRequestSpecification(path).get();
