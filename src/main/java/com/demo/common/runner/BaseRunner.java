@@ -1,5 +1,6 @@
 package com.demo.common.runner;
 
+import com.alibaba.fastjson.JSONObject;
 import com.demo.common.GlobalVar;
 import com.demo.common.utils.RetryUtils;
 import com.jayway.restassured.response.Response;
@@ -29,4 +30,13 @@ public abstract class BaseRunner {
     // 失败重试
     @Rule
     public RetryUtils retryUtils = new RetryUtils(GlobalVar.RETRY_COUNTS);
+
+    /**
+     * 非application/josn 转成json
+     * @param response
+     * @return
+     */
+    public static JSONObject resToJson(Response response){
+        return JSONObject.parseObject(response.asString());
+    }
 }
